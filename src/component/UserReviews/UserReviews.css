@@ -1,0 +1,29 @@
+.TopUserReview{
+    margin-top:100px;
+}
+.userReviewContainer{
+    background: linear-gradient( 160deg, rgb(0 82 82 / 91%) , rgb(68 84 0 / 74%)), url("../image/userreview/review.jpg");
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:rgb(209, 209, 209);
+}
+.reviewDevider{
+    width: 300px;
+    height: 2px;
+    margin:auto;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to right, rgb(255 35 0 / 93%) , rgb(0 255 72));
+}
+.userReviewSliderPart{
+    height:300px;
+}
+@media only screen and (min-width:200px) and (max-width:767px){
+    .TopUserReview{
+        margin-top:0px;
+    }
+}
+/* 
+
+*/
+/* linear-gradient(to right, rgb(0 220 255 / 93%) , rgb(0 255 72 / 74%)); */

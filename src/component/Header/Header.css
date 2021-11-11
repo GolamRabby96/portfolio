@@ -1,0 +1,172 @@
+.headerAll{
+    background-color: #2f2f2f;
+    background:linear-gradient(89deg, #000000b5, #000000db), url("../image/light.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.headerBody{
+    padding-top:100px;
+}
+.seperator{
+    width:100%;
+    padding:20px;
+}
+.colfour {
+   padding-left: 80px;
+}
+.colEight{
+}
+
+
+.myphoto{
+    position: relative;
+}
+.profilePhoto {
+    width:100%;
+    box-sizing: border-box;
+    position:absolute;
+    top:0;
+    left:0;
+    border-radius: 4px;
+    width:280px;
+}
+.home{
+    padding-top: 20px;
+}
+
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+
+
+
+
+
+
+.home-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+    font-family: Rubik;
+}
+
+.title {
+    animation-name: moveLeft;
+    animation-duration: 0.7s;
+    font-weight: 700;
+}
+.titleTwo{
+    animation-name: moveLeft;
+    animation-duration: 1s;
+    line-height:30px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+.titleThree{
+    animation-name: moveUp;
+    animation-duration: 1.3s;
+    margin-bottom: 20px;
+}
+.text{
+    font-size: 14px;
+    color:#ffffff69;
+    margin-bottom: 10px;
+}
+
+.infoSpan {
+    color: rgb(1, 243, 191);
+}
+
+.linkicon {
+    padding:20px;
+    font-size: 22px;
+    color:#ffffff69;
+}
+.linkicon:hover{
+    color:#ffffffdb;
+}
+
+
+@keyframes moveRight{
+    0%{
+        opacity:0;
+        transform:translateX(100px);
+    }
+    100%{
+        opacity:0;
+        transform:translate(0px);
+    }
+}
+@keyframes moveLeft{
+    0%{
+        opacity:0;
+        transform:translateX(-150px);
+    }
+    100%{
+        opacity:1;
+        transform:translate(0px);
+    }
+}
+
+@keyframes moveUp{
+    0%{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    100%{
+        opacity:1;
+        transform:translate(0px);
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1199px) {
+    .colfour {
+        padding-left: 0px;
+     }
+}
+@media only screen and (min-width:992px) and (max-width:1024px){
+    .colfour {
+        padding-left: 0px;
+     }
+}
+@media only screen and (min-width:768px) and (max-width:992px){
+    .colfour {
+        padding-left: 0px;
+     }
+     .profilePhoto {
+        width:100%;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:767px){
+    .colfour {
+        padding-left: 0px;
+     }
+     .profilePhoto {
+        position:static;
+    }
+    .titleTwo {
+        line-height: 25px;
+        letter-spacing: 0.5px;
+        font-size: 15px;
+    }
+    .helloHi p {
+        font-size: 14px;
+        padding: 0px 20px;
+        text-align: justify;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

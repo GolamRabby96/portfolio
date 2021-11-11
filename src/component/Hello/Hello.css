@@ -1,0 +1,61 @@
+.HelloTop{
+    margin-top:100px;
+}
+.helloHi h1{
+    font-size:26px;
+    font-weight: 700;
+    color:black
+}
+
+.helloHi p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #545454;
+    padding:0px 50px;
+}
+.helloCv{
+    padding-left: 50px;
+    padding-top: 20px;
+}
+.button {
+    font-size: 16px;
+    border:2px solid white;
+    border-radius: 30px;
+    outline: none;
+    background-color:#11cf90;
+    color:black;
+    padding:12px 25px;
+    position: relative;
+    transform: translateZ(0);
+    animation-name: moveUp;
+    animation-duration: 1s;
+    cursor:pointer;
+}
+.button:before{
+    content:"";
+    position: absolute;
+    border-radius: 30px;
+    z-index: -1;
+    top:0;
+    left:0;
+    right: 0;
+    bottom:0;
+    background: #eeff00;
+    transform:scaleX(0);
+    transition:300ms ease-out;
+}
+.button:hover:before{
+    transform: scale(1);
+}
+								
+@media only screen and (min-width:200px) and (max-width:767px){
+    .helloHi p {
+        font-size: 14px;
+        padding: 0px 20px;
+        text-align: justify;
+    }
+    .button {
+        font-size: 14px;
+        padding: 4px 25px;
+    }
+}
