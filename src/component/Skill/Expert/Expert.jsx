@@ -1,84 +1,37 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faJs, faHtml5, faCss3, faPython, faBootstrap, faReact, faNode, faGitAlt, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faCode, faDatabase, faServer } from '@fortawesome/free-solid-svg-icons';
 import clanguage from '../../image/expert/c.png';
 import cpp from '../../image/expert/cpp.png';
-import python from '../../image/expert/python.png';
-import javascript from '../../image/expert/js.png';
 import es6 from '../../image/expert/es6.jpeg';
-import bootstrap from '../../image/expert/bootstrap.png';
-import react from '../../image/expert/react.png';
 import reactRouter from '../../image/expert/react router.png';
 import express from '../../image/expert/express.png';
-import mongoDb from '../../image/expert/mongodb.png';
-import node from '../../image/expert/node.png';
-import django from '../../image/expert/django.png';
-import sqlite3 from '../../image/expert/sqlite.png';
-import html from '../../image/expert/html.png';
-import css from '../../image/expert/css.png';
 
 const Expert = () => {
-    return (
-        <div className="rightExpert">
-            <div className="rightExLogo shadow">
-                <img src={clanguage} alt="" />
-                <p>C</p>
-            </div>
-            <div className="rightExLogo">
-                <img src={cpp} alt="" />
-                <p>C++</p>
-            </div>
-            <div className="rightExLogo">
-                <img src={python} alt="" />
-                <p>python</p>
-            </div>
-            <div className="rightExLogo">
-                <img src={html} alt="" />
-                <p>Html5</p>
-            </div>
-            <div className="rightExLogo">
-                <img src={css} alt="" />
-                <p>Css3</p>
-            </div>
-            <div className="rightExLogo">
-                <img src={django} alt="" />
-                <p>Django</p>
-            </div>
-            <div className="rightExLogo">
-                <img src={sqlite3} alt="" />
-                <p>Sqlite3</p>
-            </div>
-            <div className="rightExLogo">
-                <img src={javascript} alt="" />
-                <p>JavaScript</p>
-            </div>
-            <div className="rightExLogo">
-                <img src={es6} alt="" />
-                <p>JS Es6</p>
-            </div>
-            <div className="rightExLogo">
-                <img src={bootstrap} alt="" />
-                <p>Bootstrap</p>
-            </div>
-            <div className="rightExLogo">
-                <img src={react} alt="" />
-                <p>React js</p>
-            </div>
-            <div className="rightExLogo">
-                <img src={reactRouter} alt="" />
-                <p>ReactRouter</p>
-            </div>
-            <div className="rightExLogo">
-                <img src={node} alt="" />
-                <p>Node Js</p>
-            </div>
-            <div className="rightExLogo">
-                <img src={express} alt="" />
-                <p>Express Js</p>
-            </div>
-            <div className="rightExLogo">
-                <img src={mongoDb} alt="" />
-                <p>MongoDb</p>
-            </div>
+    const skills = [
+        { name: 'C', icon: <img src={clanguage} alt="C" /> },
+        { name: 'C++', icon: <img src={cpp} alt="C++" /> },
+        { name: 'Python', icon: <FontAwesomeIcon icon={faPython} /> },
+        { name: 'HTML5', icon: <FontAwesomeIcon icon={faHtml5} /> },
+        { name: 'CSS3', icon: <FontAwesomeIcon icon={faCss3} /> },
+        { name: 'JavaScript', icon: <FontAwesomeIcon icon={faJs} /> },
+        { name: 'ES6', icon: <img src={es6} alt="ES6" /> },
+        { name: 'Bootstrap', icon: <FontAwesomeIcon icon={faBootstrap} /> },
+        { name: 'React js', icon: <FontAwesomeIcon icon={faReact} /> },
+        { name: 'ReactRouter', icon: <img src={reactRouter} alt="ReactRouter" /> },
+        { name: 'Node Js', icon: <FontAwesomeIcon icon={faNode} /> },
+        { name: 'Express Js', icon: <img src={express} alt="Express" /> },
+    ];
 
+    return (
+        <div className="skill-grid">
+            {skills.map((skill, index) => (
+                <div className="skill-card" key={index}>
+                    <div className="skill-icon">{skill.icon}</div>
+                    <span className="skill-name">{skill.name}</span>
+                </div>
+            ))}
         </div>
     );
 };

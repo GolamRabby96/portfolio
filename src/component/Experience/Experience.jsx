@@ -29,20 +29,32 @@ const Experience = () => {
 					<br />
 					<div class="container testclass">
 						<div class="row">
-							<div class="col">
+							<div class="col-md-6 mb-5">
 								<div class="exprence_inside">
 									<i>{Briefcase}</i>
 									<span>Aug 2019-Continue</span>
-									<h4>Netwoking Engineer at ADN Telecom</h4>
+									<h4>Sr. Engineer at ADN Telecom</h4>
 									<div class="sidebar"></div>
 									<div class="bottombar"></div>
 								</div>
 							</div>
-							<div class="col">
+							<div class="col-md-6 mb-5">
+
 								<div class="exprence_inside">
 									<i>{Briefcase}</i>
 									<span>2018-Continue</span>
-									<h4>Web Developer {'&'} Designer at Fiverr</h4>
+									<h4>
+										MERN Developer at Fiverr</h4>
+									<div class="sidebar"></div>
+									<div class="bottombar"></div>
+								</div>
+							</div>
+							<div class="col-md-6 mb-5">
+
+								<div class="exprence_inside">
+									<i>{Briefcase}</i>
+									<span>2026</span>
+									<h4>Sr. Software Engineer at Gogentik</h4>
 									<div class="sidebar"></div>
 									<div class="bottombar"></div>
 								</div>
@@ -93,7 +105,7 @@ const Experience = () => {
 									<span>2018-Continue</span>
 									<h4>HSC At Khulna Model School Collage</h4>
 									<div class="sidebar"></div>
-									<div  class="bottombar"></div>
+									<div class="bottombar"></div>
 								</div>
 							</div>
 						</div>

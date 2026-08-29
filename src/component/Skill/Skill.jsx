@@ -4,77 +4,63 @@ import Expert from './Expert/Expert';
 import Familiar from './Familiar/Familiar';
 import "./Skill.css"
 import Tools from './Tools/Tools';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar, faThumbsUp, faEye, faWrench } from '@fortawesome/free-solid-svg-icons';
+
 const Skill = () => {
     const [skill, setSkill] = useState({
         expert: true,
-        comfort:false,
-        familiar:false,
-        tools:false
+        comfort: false,
+        familiar: false,
+        tools: false
     })
+
     const handleSkill = (text) => {
-        console.log(text)
-        if(text === 'expert'){
-            setSkill({
-                expert: true,
-                comfort:false,
-                familiar:false,
-                tools:false
-            })
-        }
-        if(text === 'comfort'){
-            setSkill({
-                expert: false,
-                comfort:true,
-                familiar:false,
-                tools:false
-            })
-        }
-        if(text === 'familiar'){
-            setSkill({
-                expert: false,
-                comfort:false,
-                familiar:true,
-                tools:false
-            })
-        }
-        if(text === 'tools'){
-            setSkill({
-                expert: false,
-                comfort:false,
-                familiar:false,
-                tools:true
-            })
-        }
+        setSkill({
+            expert: text === 'expert',
+            comfort: text === 'comfort',
+            familiar: text === 'familiar',
+            tools: text === 'tools'
+        })
     }
+
     return (
-        <div id="SKILLS" className="container-fluid">
+        <div id="SKILLS" className="container-fluid py-5">
             <div className="container">
                 <div className="row skillRow">
-                    <div className="col-md-12 headText">
+                    <div className="col-12 headText text-center">
                         <h2>General Skill_</h2>
                     </div>
-                    <div className="col-md-4 skillColFour ">
-                        <div  className="skillSideBar ">
-                            <div className="expert shadow">
-                                <p onClick={()=>handleSkill("expert")}>Expert</p>
+                    <div className="col-12 col-md-4 skillColFour mb-4 mb-md-0">
+                        <div className="skillSideBar">
+                            <div className={`expert shadow ${skill.expert ? 'active' : ''}`}>
+                                <p onClick={() => handleSkill("expert")}>
+                                    <FontAwesomeIcon icon={faStar} /> Expert
+                                </p>
                             </div>
-                            <div className="expert shadow">
-                                <p onClick={()=>handleSkill("comfort")}>Comfort</p>
+                            <div className={`expert shadow ${skill.comfort ? 'active' : ''}`}>
+                                <p onClick={() => handleSkill("comfort")}>
+                                    <FontAwesomeIcon icon={faThumbsUp} /> Comfort
+                                </p>
                             </div>
-                            <div className="expert shadow">
-                                <p onClick={()=>handleSkill("familiar")}>Familiar</p>
+                            <div className={`expert shadow ${skill.familiar ? 'active' : ''}`}>
+                                <p onClick={() => handleSkill("familiar")}>
+                                    <FontAwesomeIcon icon={faEye} /> Familiar
+                                </p>
                             </div>
-                            <div className="expert shadow">
-                                <p onClick={()=>handleSkill("tools")}>Tools</p>
+                            <div className={`expert shadow ${skill.tools ? 'active' : ''}`}>
+                                <p onClick={() => handleSkill("tools")}>
+                                    <FontAwesomeIcon icon={faWrench} /> Tools
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div  className="col-md-8">
-                        <div className="rightEight shadow">
-                            {skill.expert && <Expert/> }
-                            {skill.comfort && <Comfort/> }
-                            {skill.familiar && <Familiar/> }
-                            {skill.tools && <Tools/> }
+                    <div className="col-12 col-md-8 mb-5 mt-4">
+                        <div className="rightEight  p-3">
+                            {skill.expert && <Expert />}
+                            {skill.comfort && <Comfort />}
+                            {skill.familiar && <Familiar />}
+                            {skill.tools && <Tools />}
                         </div>
                     </div>
                 </div>
