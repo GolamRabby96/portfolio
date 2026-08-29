@@ -1,61 +1,146 @@
-.HelloTop{
-    margin-top:100px;
-}
-.helloHi h1{
-    font-size:26px;
-    font-weight: 700;
-    color:black
+.HelloTop {
+    margin-top: 60px;
+    padding: 40px 0;
 }
 
-.helloHi p {
-    font-size: 18px;
+.helloContent {
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+}
+
+.greeting {
+    margin-bottom: 15px;
+}
+
+.greetingText {
+    display: inline-block;
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: 600;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 8px 20px;
+    border: 2px solid var(--color-accent);
+    border-radius: 50px;
+    background: rgba(0, 229, 255, 0.05);
+}
+
+.nameTitle {
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 800;
+    color: #0f172a;
+    margin: 20px 0 10px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.roleTitle {
+    font-size: clamp(18px, 3vw, 24px);
     font-weight: 500;
-    color: #545454;
-    padding:0px 50px;
+    color: #475569;
+    margin: 0 0 25px;
+    line-height: 1.4;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 10px;
 }
-.helloCv{
-    padding-left: 50px;
-    padding-top: 20px;
+
+.roleTitle::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-green));
+    border-radius: 2px;
 }
+
+.description {
+    font-size: clamp(15px, 2vw, 17px);
+    font-weight: 400;
+    color: #334155;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.ctaButton {
+    margin-top: 35px;
+    display: inline-block;
+}
+
 .button {
     font-size: 16px;
-    border:2px solid white;
+    border: 2px solid #0f172a;
     border-radius: 30px;
     outline: none;
-    background-color:#11cf90;
-    color:black;
-    padding:12px 25px;
+    background-color: var(--color-accent);
+    color: #0f172a;
+    padding: 14px 32px;
     position: relative;
     transform: translateZ(0);
     animation-name: moveUp;
     animation-duration: 1s;
-    cursor:pointer;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
 }
-.button:before{
-    content:"";
+
+.button:before {
+    content: "";
     position: absolute;
     border-radius: 30px;
     z-index: -1;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     right: 0;
-    bottom:0;
-    background: #eeff00;
-    transform:scaleX(0);
-    transition:300ms ease-out;
+    bottom: 0;
+    background: var(--color-accent-green);
+    transform: scaleX(0);
+    transition: 300ms ease-out;
 }
-.button:hover:before{
+
+.button:hover:before {
     transform: scale(1);
 }
-								
-@media only screen and (min-width:200px) and (max-width:767px){
-    .helloHi p {
-        font-size: 14px;
-        padding: 0px 20px;
-        text-align: justify;
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 229, 255, 0.3);
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
     }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+    .HelloTop {
+        margin-top: 40px;
+        padding: 20px 0;
+    }
+
+    .description {
+        font-size: 14px;
+        padding: 0 5px;
+    }
+
     .button {
         font-size: 14px;
-        padding: 4px 25px;
+        padding: 12px 24px;
+    }
+
+    .greetingText {
+        letter-spacing: 2px;
+        padding: 6px 16px;
     }
 }

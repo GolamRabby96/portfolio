@@ -1,58 +1,49 @@
 import React from "react";
 import "./Contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckSquare } from "@fortawesome/free-solid-svg-icons";
 import {
 	faFacebookSquare,
 	faGithubSquare,
 	faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import emailjs from "emailjs-com";
 
 const Contact = () => {
 	const facebook = <FontAwesomeIcon icon={faFacebookSquare} />;
 	const github = <FontAwesomeIcon icon={faGithubSquare} />;
 	const linkedin = <FontAwesomeIcon icon={faLinkedin} />;
 
-	const sendEmail = (e) => {
+	const handleSubmit = (e) => {
 		e.preventDefault();
+		const form = e.target;
+		const email = form.email.value;
+		const message = form.message.value;
 
-		emailjs
-			.sendForm(
-				"service_z1mbyro",
-				"template_nw0gqwq",
-				e.target,
-				"user_gG4bd9HjAiplceoyYckaq"
-			)
-			.then(
-				(result) => {
-					window.alert("Thank you for mailing me.");
-				},
-				(error) => {
-					//   console.log(error.text);
-				}
-			);
-		e.target.reset();
+		const mailtoLink = `mailto:golamrabbynwu@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(email)}&body=${encodeURIComponent(message)}`;
+		window.location.href = mailtoLink;
 	};
 
 	return (
-		<div id="CONTACT" className="">
+		<div id="CONTACT" className="contactSection">
 			<div className="container contacttitle headText">
 				<h2>GET IN TOUCH</h2>
+				<p className="contactSubtitle">Let's connect and create something amazing together</p>
 			</div>
 			<div className="container">
-				<div className="row">
-					<div className="col-md-6 pb-5">
-						<div className="shadow p-5">
+				<div className="row g-4">
+					<div className="col-md-5">
+						<div className="contactInfoCard shadow">
+							<div className="infoIcon">
+								<i className="bi bi-envelope"></i>
+							</div>
 							<h4>Don't be shy !</h4>
 							<p>
 								Feel free to get in touch with me. I am always open to
 								discussing new projects, creative ideas or opportunities to be
 								part of your visions.
 							</p>
-							<div>
+							<div className="socialLinks">
 								<a
-									className="linkiconContact"
+									className="socialIcon"
 									rel="noreferrer"
 									target="_blank"
 									href="https://github.com/GolamRabby96"
@@ -60,15 +51,15 @@ const Contact = () => {
 									{github}
 								</a>
 								<a
-									className="linkiconContact"
+									className="socialIcon"
 									rel="noreferrer"
 									target="_blank"
-									href="https://www.facebook.com/razznisi07"
+									href="https://www.facebook.com/golamrabby07"
 								>
 									{facebook}
 								</a>
 								<a
-									className="linkiconContact"
+									className="socialIcon"
 									rel="noreferrer"
 									target="_blank"
 									href="https://www.linkedin.com/in/golam-rabby-10353a161/"
@@ -78,38 +69,40 @@ const Contact = () => {
 							</div>
 						</div>
 					</div>
-					<div className="col-md-6">
-						<div className="contactForm">
-							<form onSubmit={sendEmail}>
-								<div class="mb-3">
-									<label for="foremail" class="form-label">
-										Email address
+					<div className="col-md-7">
+						<div className="contactFormCard shadow p-4">
+							<form onSubmit={handleSubmit}>
+								<div className="mb-3">
+									<label htmlFor="foremail" className="form-label">
+										Your email
 									</label>
 									<input
-										class="form-control"
+										className="form-control customInput"
 										name="email"
 										type="email"
 										id="foremail"
+										placeholder="Enter your email"
 										required
 									/>
 								</div>
-								<div class="mb-3">
-									<label for="forSubject" class="form-label">
-										Your valuable words
+								<div className="mb-3">
+									<label htmlFor="forSubject" className="form-label">
+										Your message
 									</label>
 									<textarea
-										class="form-control"
+										className="form-control customInput"
 										name="message"
-										type="textarea"
+										placeholder="Write your message here..."
 										required
+										rows="5"
 									/>
 								</div>
-								<div class="mb-3">
+								<div className="mb-3">
 									<button
-										className="container btn btn-sm btn-info"
+										className="btn submitButton"
 										type="submit"
 									>
-										Submit
+										Send Message
 									</button>
 								</div>
 							</form>
@@ -117,6 +110,7 @@ const Contact = () => {
 					</div>
 				</div>
 			</div>
+			<div className="contactBottomSpace"></div>
 		</div>
 	);
 };

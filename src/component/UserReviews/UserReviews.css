@@ -1,29 +1,50 @@
 .TopUserReview{
-    margin-top:100px;
+    margin-top: 60px;
+    padding-bottom: 40px;
 }
 .userReviewContainer{
-    background: linear-gradient( 160deg, rgb(0 82 82 / 91%) , rgb(68 84 0 / 74%)), url("../image/userreview/review.jpg");
+    background: linear-gradient(160deg, rgb(0 82 82 / 91%) , rgb(68 84 0 / 74%)), url("../image/userreview/review.jpg");
     background-position: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    color:rgb(209, 209, 209);
+    color: var(--color-text-secondary);
+    padding: 40px 0;
 }
 .reviewDevider{
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 2px;
-    margin:auto;
+    margin: auto;
     margin-bottom: 20px;
     background-image: linear-gradient(to right, rgb(255 35 0 / 93%) , rgb(0 255 72));
 }
 .userReviewSliderPart{
-    height:300px;
+    min-height: auto;
 }
-@media only screen and (min-width:200px) and (max-width:767px){
-    .TopUserReview{
-        margin-top:0px;
+.userReviewSliderPart p {
+    font-size: clamp(13px, 2vw, 16px);
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+    color: var(--color-text-secondary);
+}
+.userReviewSliderPart h1 {
+    font-size: clamp(18px, 3vw, 24px);
+    margin-bottom: 10px;
+    color: var(--color-text-primary);
+}
+
+@media (max-width: 767px) {
+    .TopUserReview {
+        margin-top: 30px;
+    }
+
+    .userReviewContainer {
+        padding: 30px 0;
+    }
+
+    .userReviewSlider {
+        padding: 15px !important;
     }
 }
-/* 
-
-*/
-/* linear-gradient(to right, rgb(0 220 255 / 93%) , rgb(0 255 72 / 74%)); */

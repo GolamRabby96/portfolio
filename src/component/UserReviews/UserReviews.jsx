@@ -11,11 +11,11 @@ const UserReviews = () => {
 							<div className="userReviewSlider p-5 ">
 								<div
 									id="carouselExampleControls"
-									class="carousel slide"
+									className="carousel slide"
 									data-bs-ride="carousel"
 								>
-									<div class="carousel-inner userReviewSliderPart">
-										<div class="carousel-item active text-center pt-5">
+									<div className="carousel-inner userReviewSliderPart">
+										<div className="carousel-item active text-center pt-5">
 											<h1>gaborbecsei</h1>
 											<div className="reviewDevider"></div>
 											<p>
@@ -26,7 +26,7 @@ const UserReviews = () => {
 												with this vendor! Good job! Thank you!
 											</p>
 										</div>
-										<div class="carousel-item text-center pt-5">
+										<div className="carousel-item text-center pt-5">
 											<h1>sanjaysharma1</h1>
 											<div className="reviewDevider"></div>
 											<p>
@@ -36,7 +36,7 @@ const UserReviews = () => {
 												him a chance to work to see yourself. EXCELLENT.
 											</p>
 										</div>
-										<div class="carousel-item text-center pt-5">
+										<div className="carousel-item text-center pt-5">
 											<h1>sanjaysharma1</h1>
 											<div className="reviewDevider"></div>
 											<p>
@@ -48,7 +48,7 @@ const UserReviews = () => {
 												for the excellent delivery.
 											</p>
 										</div>
-										<div class="carousel-item text-center pt-5">
+										<div className="carousel-item text-center pt-5">
 											<h1>jaiserve</h1>
 											<div className="reviewDevider"></div>
 											<p>
@@ -58,28 +58,28 @@ const UserReviews = () => {
 										</div>
 									</div>
 									<button
-										class="carousel-control-prev"
+										className="carousel-control-prev"
 										type="button"
 										data-bs-target="#carouselExampleControls"
 										data-bs-slide="prev"
 									>
 										<span
-											class="carousel-control-prev-icon"
+											className="carousel-control-prev-icon"
 											aria-hidden="true"
 										></span>
-										<span class="visually-hidden">Previous</span>
+										<span className="visually-hidden">Previous</span>
 									</button>
 									<button
-										class="carousel-control-next"
+										className="carousel-control-next"
 										type="button"
 										data-bs-target="#carouselExampleControls"
 										data-bs-slide="next"
 									>
 										<span
-											class="carousel-control-next-icon"
+											className="carousel-control-next-icon"
 											aria-hidden="true"
 										></span>
-										<span class="visually-hidden">Next</span>
+										<span className="visually-hidden">Next</span>
 									</button>
 								</div>
 							</div>

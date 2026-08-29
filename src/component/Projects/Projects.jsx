@@ -10,8 +10,8 @@ import sixtynine from "../image/projects/69.JPG";
 const Projects = () => {
 	return (
 		<div className="container">
-			<div className="container projectTitle headText">
-				<h2>Projects_</h2>
+			<div className="container projectTitle headText text-center">
+				<h2>Projects</h2>
 			</div>
 			<div className="row shadow projectRow">
 				<div className="col-md-4 ">
@@ -37,40 +37,43 @@ const Projects = () => {
 				<div className="col-md-8 ">
 					<div className="projectDescription projectColEdit">
 						<h2>
-							React and Express project_{" "}
+							Full-Stack MERN Platform_{" "}
 							<a
 								rel="noreferrer"
 								href="https://github.com/GolamRabby96/sixty-ninth-street"
 								target="_blank"
 							>
-								github
+								GitHub
 							</a>
-							||
+							{" / "}
 							<a
 								rel="noreferrer"
 								href="https://sixty-ninth-street.web.app/"
 								target="_blank"
 							>
-								website
+								Live Site
 							</a>
 						</h2>
-						<h5>Project Name: sixty-ninth-street</h5>
+						<h5>sixty-ninth-street</h5>
 						<p>
-							This is bassically a property selling / rent web site where a user can sell or buy property ...
+							A full-stack real estate platform built with React and Express.
+							Users can list, browse, and manage property listings for sale
+							or rent. Features include advanced search filters, property
+							detail pages, and a responsive booking workflow.
 						</p>
 						<p className="text-danger">
-							--------  This site is under development ---------
+							<span className="badge bg-warning text-dark">Work in Progress</span>
 						</p>
-						<h4>used stacks_</h4>
+						<h4>Tech Stack</h4>
 						<div className="usedStack">
-							<button className="projectButton">javascript</button>
-							<button className="projectButton">react js</button>
+							<button className="projectButton">JavaScript</button>
+							<button className="projectButton">React</button>
 							<button className="projectButton">Redux</button>
-							<button className="projectButton">express js</button>
-							<button className="projectButton">mongodb</button>
-							<button className="projectButton">mongoose</button>
-							<button className="projectButton">bootstrap</button>
-							<button className="projectButton">heroku</button>
+							<button className="projectButton">Express</button>
+							<button className="projectButton">MongoDB</button>
+							<button className="projectButton">Mongoose</button>
+							<button className="projectButton">Bootstrap</button>
+							<button className="projectButton">Heroku</button>
 						</div>
 					</div>
 				</div>
@@ -99,42 +102,41 @@ const Projects = () => {
 				<div className="col-md-8 ">
 					<div className="projectDescription projectColEdit">
 						<h2>
-							React and Express project_{" "}
+							Full-Stack Service Platform_{" "}
 							<a
 								rel="noreferrer"
 								href="https://github.com/GolamRabby96/Bike-world-client"
 								target="_blank"
 							>
-								github
+								GitHub
 							</a>
-							||
+							{" / "}
 							<a
 								rel="noreferrer"
 								href="https://bike-world-6731e.web.app/"
 								target="_blank"
 							>
-								website
+								Live Site
 							</a>
 						</h2>
-						<h5>Project Name: Bike World</h5>
+						<h5>Bike World</h5>
 						<p>
-							This is react base project where user can make crud operation
-							.User can book service and give feedback for their service. it has
-							an authentication system where a user can create a account and
-							login their account . General user and admin authentication .admin
-							can access all features but user have access limit
+							A feature-rich bike service platform with complete CRUD operations.
+							Users can book services, leave feedback, and manage their service
+							history. The app includes role-based authentication for general users
+							and admins, with admin privileges to manage all platform data.
 						</p>
-						<h4>used stacks_</h4>
+						<h4>Tech Stack</h4>
 						<div className="usedStack">
-							<button className="projectButton">html5</button>
-							<button className="projectButton">css3</button>
-							<button className="projectButton">javascript</button>
-							<button className="projectButton">react js</button>
-							<button className="projectButton">react router</button>
-							<button className="projectButton">express js</button>
-							<button className="projectButton">mongodb</button>
-							<button className="projectButton">bootstrap</button>
-							<button className="projectButton">heroku</button>
+							<button className="projectButton">HTML5</button>
+							<button className="projectButton">CSS3</button>
+							<button className="projectButton">JavaScript</button>
+							<button className="projectButton">React</button>
+							<button className="projectButton">React Router</button>
+							<button className="projectButton">Express</button>
+							<button className="projectButton">MongoDB</button>
+							<button className="projectButton">Bootstrap</button>
+							<button className="projectButton">Heroku</button>
 						</div>
 					</div>
 				</div>
@@ -160,32 +162,36 @@ const Projects = () => {
 				<div className="col-md-8 ">
 					<div className="projectDescription projectColEdit">
 						<h2>
-							React project_{" "}
+							Single Page E-Commerce_{" "}
 							<a
 								rel="noreferrer"
 								href="https://github.com/GolamRabby96/dream-house-client"
 								target="_blank"
 							>
-								github
+								GitHub
 							</a>
-							||
+							{" / "}
 							<a
 								rel="noreferrer"
 								href="https://golamrabby96.github.io/Shoes_store/"
 								target="_blank"
 							>
-								website
+								Live Site
 							</a>
 						</h2>
-						<h5>Project Name: Penguin Fashion </h5>
-						<p>A single page 100% responsive mobo friendly website</p>
-						<h4>used stacks_</h4>
+						<h5>Penguin Fashion</h5>
+						<p>
+							A modern, fully responsive single-page e-commerce experience focused
+							on footwear. Built with clean UI/UX principles, smooth animations,
+							and mobile-first design for optimal shopping across all devices.
+						</p>
+						<h4>Tech Stack</h4>
 						<div className="usedStack">
-							<button className="projectButton">html5</button>
-							<button className="projectButton">css3</button>
-							<button className="projectButton">javascript</button>
-							<button className="projectButton">react js</button>
-							<button className="projectButton">bootstrap</button>
+							<button className="projectButton">HTML5</button>
+							<button className="projectButton">CSS3</button>
+							<button className="projectButton">JavaScript</button>
+							<button className="projectButton">React</button>
+							<button className="projectButton">Bootstrap</button>
 						</div>
 					</div>
 				</div>
@@ -211,42 +217,43 @@ const Projects = () => {
 				<div className="col-md-8 ">
 					<div className="projectDescription projectColEdit">
 						<h2>
-							React and Express project_{" "}
+							Full-Stack E-Commerce Platform_{" "}
 							<a
 								href="https://github.com/GolamRabby96/dream-house-client"
 								rel="noreferrer"
 								target="_blank"
 							>
-								github
+								GitHub
 							</a>
-							||
+							{" / "}
 							<a
 								href="https://dream-house-ecbff.web.app/"
 								rel="noreferrer"
 								target="_blank"
 							>
-								website
+								Live Site
 							</a>
 						</h2>
-						<h4>Project Name: Dreams-House</h4>
+						<h4>Electro Hub</h4>
 						<p>
-							A single page accessories website where user can select any
-							product, add to cart product, and checkout with information.Also
-							have user login option where user can login with his gmail account
+							A complete e-commerce website where users can browse electronic products,
+							add items to a shopping cart, and complete purchases. Includes secure
+							Google authentication, user profiles, order management, and a
+							streamlined checkout flow for a smooth shopping experience.
 						</p>
-						<h4>used stacks_</h4>
+						<h4>Tech Stack</h4>
 						<div className="usedStack">
-							<button className="projectButton">html5</button>
-							<button className="projectButton">css3</button>
-							<button className="projectButton">javascript</button>
-							<button className="projectButton">react js</button>
-							<button className="projectButton">react router</button>
-							<button className="projectButton">node js</button>
-							<button className="projectButton">express js</button>
-							<button className="projectButton">mongodb</button>
-							<button className="projectButton">bootstrap</button>
-							<button className="projectButton">firebase authentication</button>
-							<button className="projectButton">heroku</button>
+							<button className="projectButton">HTML5</button>
+							<button className="projectButton">CSS3</button>
+							<button className="projectButton">JavaScript</button>
+							<button className="projectButton">React</button>
+							<button className="projectButton">React Router</button>
+							<button className="projectButton">Node</button>
+							<button className="projectButton">Express</button>
+							<button className="projectButton">MongoDB</button>
+							<button className="projectButton">Bootstrap</button>
+							<button className="projectButton">Firebase Auth</button>
+							<button className="projectButton">Heroku</button>
 						</div>
 					</div>
 				</div>
@@ -267,30 +274,48 @@ const Projects = () => {
 				<div className="col-md-8 ">
 					<div className="projectDescription projectColEdit">
 						<h2>
-							Python and Django project_ <a href="https://github.com/GolamRabby96/BlogBD-Django" rel="noreferrer"
-								target="_blank">github</a>||
+							Full-Stack Blogging Platform_{" "}
+							<a href="https://github.com/GolamRabby96/BlogBD-Django" rel="noreferrer"
+								target="_blank">GitHub</a>
+							{" / "}
 							<a href="http://golamrabby96.pythonanywhere.com/" rel="noreferrer"
-								target="_blank">website</a>
+								target="_blank">Live Site</a>
 						</h2>
-						<h4>Project Name: blog bd</h4>
+						<h4>Blog BD</h4>
 						<p>
-							This is python base django project where user can create a account , create post , have post CRUD opportunity , also have post like comment option. user can update user profile. a user can create a group , add member or remove member opportunity, also a user can post on group.this project have blood donate section where user can register, then a user can donate blood if any on needed also user can post and find blood.this site also have django admin panel where admin have super power to do anything with this data.
+							A Django-powered community platform where users can create accounts,
+							publish blog posts, and engage through comments and likes. Includes
+							group management, member roles, blood donation listings, and a full
+							admin panel for content and user moderation.
 						</p>
-						<h4>used stacks_</h4>
+						<h4>Tech Stack</h4>
 						<div id="TESTIMONIALS" className="usedStack">
-							<button className="projectButton">html5</button>
-							<button className="projectButton">css3</button>
-							<button className="projectButton">javascript</button>
-							<button className="projectButton">python</button>
-							<button className="projectButton">django</button>
-							<button className="projectButton">sqlite</button>
-							<button className="projectButton">bootstrap</button>
+							<button className="projectButton">HTML5</button>
+							<button className="projectButton">CSS3</button>
+							<button className="projectButton">JavaScript</button>
+							<button className="projectButton">Python</button>
+							<button className="projectButton">Django</button>
+							<button className="projectButton">SQLite</button>
+							<button className="projectButton">Bootstrap</button>
 						</div>
 					</div>
 				</div>
 			</div>
-			{/* ......................................... */}
+		{/* ......................................... */}
+		<div className="row projectRow">
+			<div className="col-12">
+				<div className="projectsNote shadow">
+					<p>
+						<strong>Note:</strong> Some live demos may be temporarily unavailable or show errors.
+						Hosting providers such as MongoDB, Render, and Heroku occasionally update their
+						terms, pricing, or service policies, which can affect app availability.
+						I am continuously working to migrate and maintain these projects on reliable platforms.
+					</p>
+				</div>
+			</div>
 		</div>
+		{/* ......................................... */}
+	</div>
 	);
 };
 

@@ -29,7 +29,7 @@ const Skill = () => {
             <div className="container">
                 <div className="row skillRow">
                     <div className="col-12 headText text-center">
-                        <h2>General Skill_</h2>
+                        <h2>General Skill</h2>
                     </div>
                     <div className="col-12 col-md-4 skillColFour mb-4 mb-md-0">
                         <div className="skillSideBar">

@@ -95,7 +95,7 @@ const Header = () => {
 										<a className="linkicon" rel="noreferrer" target="_blank" href="https://github.com/GolamRabby96">
 											{github}
 										</a>
-										<a className="linkicon" rel="noreferrer" target="_blank" href="https://www.facebook.com/razznisi07">
+										<a className="linkicon" rel="noreferrer" target="_blank" href="https://www.facebook.com/golamrabby07">
 											{facebook}
 										</a>
 										<a className="linkicon" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/golam-rabby-10353a161/">
