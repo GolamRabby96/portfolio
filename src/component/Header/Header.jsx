@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 import NavBar from "../NavBar/NavBar";
 import myphoto from "../image/me1.jpg";
@@ -18,11 +18,26 @@ const Header = () => {
 	const linkedin = <FontAwesomeIcon icon={faLinkedin} />;
 	const [state, setstate] = useState({
 		name: "MD. RABBY HASAN_",
-		age: "23.",
 		phone: "01624540092.",
 		email: "golamrabbynwu@gmail.com.",
 		address: "Meherpur,khulna,Bangladesh.",
 	});
+	const [age, setAge] = useState("");
+
+	useEffect(() => {
+		const calculateAge = (birthDate) => {
+			const [day, month, year] = birthDate.split("-").map(Number);
+			const today = new Date();
+			const birth = new Date(year, month - 1, day);
+			let calculatedAge = today.getFullYear() - birth.getFullYear();
+			const monthDiff = today.getMonth() - birth.getMonth();
+			if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+				calculatedAge--;
+			}
+			return calculatedAge;
+		};
+		setAge(calculateAge("03-06-1996"));
+	}, []);
 	return (
 		<div>
 			<NavBar />
@@ -59,11 +74,10 @@ const Header = () => {
 										/>
 									</div>
 									<div>
-										<p className="titleTwo">
-											<span className="infoSpan titleThree">Age:</span>{" "}
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-											{state.age}{" "}
-										</p>
+									<p className="titleTwo">
+										<span className="infoSpan titleThree">Age:</span>{" "}
+										{age}
+									</p>
 										<p className="titleTwo">
 											<span className="infoSpan titleThree">phone:</span>&nbsp;
 											&nbsp;&nbsp;&nbsp;&nbsp;{state.phone}
