@@ -28,7 +28,7 @@
 .navbarHeader .logo {
     position: relative;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--color-text-primary);
     text-decoration: none;
     font-size: 1.5em;
     text-transform: uppercase;
@@ -52,7 +52,7 @@
     position: relative;
     margin: 0px 20px;
     text-decoration: none;
-    color: #e2e8f0;
+    color: var(--color-text-muted);
     letter-spacing: 1px;
     font-weight: 500;
     font-size: 14px;
@@ -65,7 +65,7 @@
 
 .navbarHeader.sticky .logo,
 .navbarHeader.sticky ul li a {
-    color: #ffffff;
+    color: var(--color-text-primary);
 }
 
 .navbarHeader.sticky ul li a:hover {

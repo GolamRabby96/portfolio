@@ -50,7 +50,7 @@ dl, ol, ul {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    color: #fff;
+    color: var(--color-text-primary);
     font-family: Rubik;
 }
 
@@ -73,7 +73,7 @@ dl, ol, ul {
 }
 .text{
     font-size: 14px;
-    color:#ffffff69;
+    color: var(--color-text-muted);
     margin-bottom: 10px;
 }
 
@@ -84,10 +84,10 @@ dl, ol, ul {
 .linkicon {
     padding:20px;
     font-size: 22px;
-    color:#ffffff69;
+    color: var(--color-text-muted);
 }
 .linkicon:hover{
-    color:#ffffffdb;
+    color: var(--color-text-primary);
 }
 
 

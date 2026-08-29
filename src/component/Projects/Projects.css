@@ -13,7 +13,7 @@
 .projectColEdit h2 {
     font-family: var(--font-primary);
     font-size: clamp(16px, 3vw, 22px);
-    color: #0f172a;
+    color: var(--color-text-primary);
 }
 
 .projectColEdit h2 a {
@@ -65,11 +65,11 @@
 
 .projectImageHover a {
     text-decoration: none;
-    color: #00e5ff;
+    color: var(--color-accent);
     font-weight: 600;
     font-size: 16px;
     letter-spacing: 2px;
-    border: 2px solid #00e5ff;
+    border: 2px solid var(--color-accent);
     padding: 10px 24px;
     border-radius: 50px;
     transition: all 0.3s ease;
@@ -93,11 +93,11 @@
 
 .projectButton {
     font-size: 16px;
-    border: 2px solid white;
+    border: 2px solid var(--color-text-primary);
     border-radius: 8px;
     outline: none;
-    background-color: #e6dfdf;
-    color: black;
+    background-color: var(--color-bg-card);
+    color: var(--color-text-primary);
     padding: 3px 10px;
     position: relative;
     transform: translateZ(0);
@@ -115,7 +115,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #fdfdfa;
+    background: var(--color-bg-card);
     transform: scaleX(0);
     transition: 300ms ease-out;
 }
@@ -125,15 +125,15 @@
 }
 
 .projectDescription h5 {
-    color: #334155;
+    color: var(--color-text-muted);
 }
 
 .projectDescription p {
-    color: #475569;
+    color: var(--color-text-secondary);
 }
 
 .projectDescription h4 {
-    color: #0f172a;
+    color: var(--color-text-primary);
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
@@ -181,20 +181,21 @@
 }
 
 .projectsNote {
-    background: #ffffff;
+    background: var(--color-bg-card);
     border-radius: 12px;
     padding: 20px 25px;
     border-left: 4px solid var(--color-accent);
     margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .projectsNote p {
-    color: #334155;
+    color: var(--color-text-secondary);
     font-size: 14px;
     line-height: 1.7;
     margin-bottom: 0;
 }
 
 .projectsNote strong {
-    color: #0f172a;
+    color: var(--color-text-primary);
 }

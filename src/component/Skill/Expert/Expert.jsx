@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faJs, faHtml5, faCss3, faPython, faBootstrap, faReact, faNode, faGitAlt, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faCode, faDatabase, faServer } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faDatabase, faServer, faBrain } from '@fortawesome/free-solid-svg-icons';
 import clanguage from '../../image/expert/c.png';
 import cpp from '../../image/expert/cpp.png';
 import es6 from '../../image/expert/es6.jpeg';
@@ -22,6 +22,7 @@ const Expert = () => {
         { name: 'ReactRouter', icon: <img src={reactRouter} alt="ReactRouter" /> },
         { name: 'Node Js', icon: <FontAwesomeIcon icon={faNode} /> },
         { name: 'Express Js', icon: <img src={express} alt="Express" /> },
+        { name: 'LLM APIs', icon: <FontAwesomeIcon icon={faBrain} /> },
     ];
 
     return (

@@ -14,18 +14,18 @@
 
 .expert{
     border-bottom: 1px solid rgb(179, 174, 174);
-    background: #ffffff;
+    background: var(--color-bg-card);
     font-weight: bold;
     border-radius: 10px;
     margin-top: 30px;
     transition: all 0.3s ease;
-    color: #64748b;
+    color: var(--color-text-muted);
 }
 
 .expert:hover, .expert.active {
     background: linear-gradient(to right, rgb(0 220 255 / 93%) , rgb(0 255 72 / 74%));
     cursor: pointer;
-    color: #0f172a;
+    color: var(--color-text-primary);
     border-bottom: 1px solid rgb(147, 255, 6);
 }
 
@@ -43,13 +43,13 @@
 
 .expert p svg {
     font-size: 14px;
-    color: #64748b;
+    color: var(--color-text-muted);
     transition: color 0.3s ease;
 }
 
 .expert:hover p svg,
 .expert.active p svg {
-    color: #0f172a;
+    color: var(--color-text-primary);
 }
 
 .skill-grid {
@@ -63,8 +63,8 @@
 
 .skill-card {
     position: relative;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
     border-radius: 12px;
     padding: 18px 10px 10px;
     text-align: center;
@@ -75,20 +75,20 @@
 
 .skill-card:hover {
     transform: translateY(-6px);
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--color-bg-card);
     border-color: rgba(0, 229, 255, 0.5);
     box-shadow: 0 6px 24px rgba(0, 229, 255, 0.2);
 }
 
 .skill-icon {
     font-size: 26px;
-    color: #0f172a;
+    color: var(--color-text-primary);
     margin-bottom: 8px;
     height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .skill-card:hover .skill-icon {
@@ -105,7 +105,7 @@
 
 .skill-name {
     display: block;
-    color: #0f172a;
+    color: var(--color-text-primary);
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.3px;
@@ -115,7 +115,7 @@
     right: 0;
     transform: translateY(100%);
     transition: transform 0.3s ease;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--color-bg-card);
     padding: 6px 4px;
     border-top: 1px solid rgba(0, 229, 255, 0.3);
 }
@@ -126,7 +126,7 @@
 
 .rightEight {
     min-height: 300px;
-    background: rgba(255, 255, 255, 0.6);
+    background: var(--color-bg-card);
     border-radius: 16px;
     padding: 20px;
 }
@@ -150,13 +150,13 @@
 
     .skill-card {
         padding: 12px 8px;
-        background: rgba(255, 255, 255, 0.9);
+        background: var(--color-bg-card);
     }
 
     .skill-icon {
         font-size: 24px;
         height: 32px;
-        color: #0f172a;
+        color: var(--color-text-primary);
     }
 
     .skill-icon img {
@@ -166,6 +166,6 @@
 
     .skill-name {
         font-size: 11px;
-        color: #0f172a;
+        color: var(--color-text-primary);
     }
 }

@@ -7,6 +7,8 @@
     max-width: 100%;
     margin: 0;
     text-align: left;
+    position: relative;
+    z-index: 1;
 }
 
 .greeting {
@@ -29,7 +31,7 @@
 .nameTitle {
     font-size: clamp(28px, 5vw, 48px);
     font-weight: 800;
-    color: #0f172a;
+    color: var(--color-text-primary);
     margin: 20px 0 10px;
     line-height: 1.1;
     letter-spacing: -1px;
@@ -38,7 +40,7 @@
 .roleTitle {
     font-size: clamp(18px, 3vw, 24px);
     font-weight: 500;
-    color: #475569;
+    color: var(--color-text-muted);
     margin: 0 0 25px;
     line-height: 1.4;
     display: inline-block;
@@ -60,7 +62,7 @@
 .description {
     font-size: clamp(15px, 2vw, 17px);
     font-weight: 400;
-    color: #334155;
+    color: var(--color-text-secondary);
     line-height: 1.8;
     margin-bottom: 20px;
     padding: 0 10px;
@@ -73,11 +75,11 @@
 
 .button {
     font-size: 16px;
-    border: 2px solid #0f172a;
+    border: 2px solid var(--color-text-primary);
     border-radius: 30px;
     outline: none;
     background-color: var(--color-accent);
-    color: #0f172a;
+    color: var(--color-text-primary);
     padding: 14px 32px;
     position: relative;
     transform: translateZ(0);
