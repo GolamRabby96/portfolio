@@ -1,23 +1,180 @@
-.HelloTop {
-    margin-top: 60px;
-    padding: 40px 0;
-}
-
-.helloContent {
-    max-width: 100%;
-    margin: 0;
-    text-align: left;
+.heroSection {
     position: relative;
-    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+    overflow: visible;
 }
 
-.greeting {
-    margin-bottom: 15px;
+[data-theme='dark'] .heroSection {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9)), url("../image/light.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--color-text-primary);
 }
 
-.greetingText {
+[data-theme='light'] .heroSection {
+    background: linear-gradient(135deg, rgba(241, 245, 249, 0.92), rgba(255, 255, 255, 0.88)), url("../image/light.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #0f172a;
+}
+
+.heroContainer {
+    position: relative;
+    z-index: 2;
+}
+
+.heroRow {
+    min-height: 500px;
+}
+
+.heroLeft {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heroProfileCard {
+    width: 100%;
+    max-width: 360px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='light'] .heroProfileCard {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.heroImageWrapper {
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    overflow: hidden;
+}
+
+.heroImage {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    border-radius: 0;
+    box-shadow: none;
+    transition: transform 0.5s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.heroImage:hover {
+    transform: scale(1.02);
+}
+
+.heroInfoCardInner {
+    position: relative;
+    z-index: 2;
+    padding: 24px;
+}
+
+[data-theme='light'] .heroInfoCardInner {
+    background: transparent;
+}
+
+.heroInfoItem {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-theme='light'] .heroInfoItem {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.heroInfoItem:last-child {
+    border-bottom: none;
+}
+
+.heroInfoLabel {
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: 14px;
+    min-width: 70px;
+    flex-shrink: 0;
+    letter-spacing: 0.5px;
+}
+
+.heroInfoValue {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+[data-theme='dark'] .heroInfoValue {
+    color: #e2e8f0;
+}
+
+[data-theme='light'] .heroInfoValue {
+    color: #334155;
+}
+
+.heroSocials {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='light'] .heroSocials {
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.heroSocialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--color-text-muted);
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+[data-theme='light'] .heroSocialLink {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.heroSocialLink:hover {
+    background: var(--color-accent);
+    color: #0f172a;
+    transform: translateY(-3px);
+}
+
+.heroRight {
+    padding-left: 40px;
+}
+
+.heroGreeting {
+    margin-bottom: 16px;
+}
+
+.heroGreetingText {
     display: inline-block;
-    font-size: clamp(14px, 2vw, 18px);
+    font-size: clamp(13px, 1.5vw, 16px);
     font-weight: 600;
     color: var(--color-accent);
     text-transform: uppercase;
@@ -25,124 +182,145 @@
     padding: 8px 20px;
     border: 2px solid var(--color-accent);
     border-radius: 50px;
-    background: rgba(0, 229, 255, 0.05);
+    background: rgba(0, 229, 255, 0.06);
 }
 
-.nameTitle {
-    font-size: clamp(28px, 5vw, 48px);
+.heroTitle {
+    font-size: clamp(32px, 5vw, 56px);
     font-weight: 800;
-    color: var(--color-text-primary);
-    margin: 20px 0 10px;
     line-height: 1.1;
+    margin-bottom: 20px;
     letter-spacing: -1px;
 }
 
-.roleTitle {
-    font-size: clamp(18px, 3vw, 24px);
+[data-theme='dark'] .heroTitle {
+    color: #ffffff;
+}
+
+[data-theme='light'] .heroTitle {
+    color: #0f172a;
+}
+
+.heroTypewriter {
+    font-size: clamp(16px, 2vw, 22px);
     font-weight: 500;
     color: var(--color-text-muted);
-    margin: 0 0 25px;
-    line-height: 1.4;
-    display: inline-block;
-    position: relative;
-    padding-bottom: 10px;
+    margin-bottom: 28px;
+    min-height: 32px;
 }
 
-.roleTitle::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-green));
-    border-radius: 2px;
-}
-
-.description {
-    font-size: clamp(15px, 2vw, 17px);
-    font-weight: 400;
-    color: var(--color-text-secondary);
+.heroDescription {
+    font-size: clamp(15px, 1.5vw, 17px);
     line-height: 1.8;
     margin-bottom: 20px;
-    padding: 0 10px;
+    color: var(--color-text-secondary);
 }
 
-.ctaButton {
-    margin-top: 35px;
-    display: inline-block;
+.heroCtas {
+    display: flex;
+    gap: 16px;
+    margin-top: 36px;
+    flex-wrap: wrap;
 }
 
-.button {
-    font-size: 16px;
-    border: 2px solid var(--color-text-primary);
-    border-radius: 30px;
-    outline: none;
-    background-color: var(--color-accent);
-    color: var(--color-text-primary);
+.heroCtaPrimary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     padding: 14px 32px;
-    position: relative;
-    transform: translateZ(0);
-    animation-name: moveUp;
-    animation-duration: 1s;
-    cursor: pointer;
+    font-size: 16px;
     font-weight: 600;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-green));
+    color: #0f172a;
+    text-decoration: none;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 229, 255, 0.3);
 }
 
-.button:before {
-    content: "";
-    position: absolute;
-    border-radius: 30px;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--color-accent-green);
-    transform: scaleX(0);
-    transition: 300ms ease-out;
+.heroCtaPrimary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 229, 255, 0.4);
+    color: #0f172a;
 }
 
-.button:hover:before {
-    transform: scale(1);
+.heroCtaSecondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    border: 2px solid var(--color-border);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    background: transparent;
 }
 
-.button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 229, 255, 0.3);
+.heroCtaSecondary:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: translateY(-3px);
 }
 
-@keyframes moveUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
+@media (max-width: 991px) {
+    .heroSection {
+        padding: 100px 0 60px;
+        min-height: auto;
     }
-    100% {
-        opacity: 1;
-        transform: translate(0px);
+
+    .heroLeft {
+        margin-bottom: 40px;
+    }
+
+    .heroRight {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .heroImage {
+        max-width: 260px;
+        height: 300px;
+    }
+
+    .heroProfileCard {
+        max-width: 320px;
+    }
+
+    .heroCtas {
+        justify-content: center;
     }
 }
 
-@media only screen and (min-width: 200px) and (max-width: 767px) {
-    .HelloTop {
-        margin-top: 40px;
-        padding: 20px 0;
+@media (max-width: 767px) {
+    .heroSection {
+        padding: 80px 0 40px;
     }
 
-    .description {
-        font-size: 14px;
-        padding: 0 5px;
+    .heroImage {
+        max-width: 220px;
+        height: 280px;
     }
 
-    .button {
-        font-size: 14px;
-        padding: 12px 24px;
+    .heroProfileCard {
+        max-width: 280px;
     }
 
-    .greetingText {
-        letter-spacing: 2px;
-        padding: 6px 16px;
+    .heroInfoCardInner {
+        padding: 20px 18px;
+    }
+
+    .heroCtas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heroCtaPrimary,
+    .heroCtaSecondary {
+        width: 100%;
+        justify-content: center;
     }
 }

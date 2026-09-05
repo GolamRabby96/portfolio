@@ -16,7 +16,7 @@ const Experience = () => {
 	const BookOpen = <FontAwesomeIcon icon={faBookOpen} />;
 	const Briefcase = <FontAwesomeIcon icon={faBriefcase} />;
 	return (
-		<div className="eduExp shadow">
+		<div id="Ex_Edu" className="eduExp shadow">
 			<div className="container">
 				<div className="row">
 					<div className="my_skill_text">
