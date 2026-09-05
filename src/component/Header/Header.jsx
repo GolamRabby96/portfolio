@@ -73,24 +73,24 @@ const Header = () => {
 											}}
 										/>
 									</div>
-									<div>
-									<p className="titleTwo">
-										<span className="infoSpan titleThree">Age:</span>{" "}
-										{age}
-									</p>
-										<p className="titleTwo">
-											<span className="infoSpan titleThree">phone:</span>&nbsp;
-											&nbsp;&nbsp;&nbsp;&nbsp;{state.phone}
-										</p>
-										<p className="titleTwo">
-											<span className="infoSpan titleThree">email:</span>{" "}
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {state.email}
-										</p>
-										<p className="titleTwo">
-											<span className="infoSpan titleThree">address:</span>{" "}
-											&nbsp;&nbsp;{state.address}
-										</p>
+									<div className="info-list">
+									<div className="info-item">
+										<span className="info-label">Age:</span>
+										<span className="info-value">{age}</span>
 									</div>
+									<div className="info-item">
+										<span className="info-label">phone:</span>
+										<span className="info-value">01624540092</span>
+									</div>
+									<div className="info-item">
+										<span className="info-label">email:</span>
+										<span className="info-value">golamrabbynwu@gmail.com</span>
+									</div>
+									<div className="info-item">
+										<span className="info-label">address:</span>
+										<span className="info-value">Meherpur, khulna, Bangladesh</span>
+									</div>
+								</div>
 									<div>
 										<a className="linkicon" rel="noreferrer" target="_blank" href="https://github.com/GolamRabby96">
 											{github}

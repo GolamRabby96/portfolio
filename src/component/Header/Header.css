@@ -1,93 +1,176 @@
 .headerAll{
+    position: relative;
     background-color: #2f2f2f;
-    background:linear-gradient(89deg, #000000b5, #000000db), url("../image/light.jpg");
+    background: linear-gradient(89deg, #000000b5, #000000db), url("../image/light.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: visible;
 }
+
+[data-theme='dark'] .headerAll {
+    background: linear-gradient(89deg, rgba(15, 23, 42, 0.92), rgba(30, 41, 59, 0.85)), url("../image/light.jpg");
+}
+
+[data-theme='light'] .headerAll {
+    background: linear-gradient(89deg, rgba(241, 245, 249, 0.88), rgba(255, 255, 255, 0.85)), url("../image/light.jpg");
+}
+
 .headerBody{
     padding-top:100px;
+    position: relative;
+    z-index: 2;
 }
+
 .seperator{
     width:100%;
     padding:20px;
 }
+
 .colfour {
    padding-left: 80px;
 }
+
 .colEight{
 }
 
 
 .myphoto{
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
+
 .profilePhoto {
-    width:100%;
+    width: 100%;
     box-sizing: border-box;
-    position:absolute;
-    top:0;
-    left:0;
     border-radius: 4px;
-    width:280px;
+    width: 280px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transform: translateY(30%);
+    z-index: 10;
 }
+
+.profilePhoto:hover {
+    transform: translateY(calc(30% - 10px)) scale(1.02);
+    box-shadow: 0 25px 70px rgba(0, 229, 255, 0.3);
+}
+
 .home{
     padding-top: 20px;
 }
-
-dl, ol, ul {
-    margin-top: 0;
-    margin-bottom: 0px;
-}
-
-
-
-
-
-
 
 .home-intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    color: var(--color-text-primary);
     font-family: Rubik;
+}
+
+[data-theme='dark'] .home-intro {
+    color: #ffffff;
+}
+
+[data-theme='light'] .home-intro {
+    color: #0f172a;
 }
 
 .title {
     animation-name: moveLeft;
     animation-duration: 0.7s;
     font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
+
+[data-theme='light'] .title {
+    color: #0f172a;
+    text-shadow: none;
+}
+
 .titleTwo{
     animation-name: moveLeft;
     animation-duration: 1s;
     line-height:30px;
     font-weight: 500;
     letter-spacing: 1.5px;
+    color: #f1f5f9;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
+
+[data-theme='light'] .titleTwo {
+    color: #334155;
+    text-shadow: none;
+}
+
 .titleThree{
     animation-name: moveUp;
     animation-duration: 1.3s;
     margin-bottom: 20px;
 }
+
 .text{
     font-size: 14px;
-    color: var(--color-text-muted);
+    color: #f1f5f9;
     margin-bottom: 10px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='light'] .text {
+    color: #64748b;
+    text-shadow: none;
 }
 
 .infoSpan {
     color: rgb(1, 243, 191);
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.info-list {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-item {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.info-label {
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: 15px;
+    min-width: 80px;
+    flex-shrink: 0;
+}
+
+.info-value {
+    color: var(--color-text-secondary);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 .linkicon {
     padding:20px;
     font-size: 22px;
-    color: var(--color-text-muted);
+    color: #f1f5f9;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
+
+[data-theme='light'] .linkicon {
+    color: #334155;
+    text-shadow: none;
+}
+
 .linkicon:hover{
-    color: var(--color-text-primary);
+    color: var(--color-accent);
 }
 
 
@@ -101,6 +184,7 @@ dl, ol, ul {
         transform:translate(0px);
     }
 }
+
 @keyframes moveLeft{
     0%{
         opacity:0;
@@ -122,31 +206,44 @@ dl, ol, ul {
         transform:translate(0px);
     }
 }
+
 @media only screen and (min-width: 1025px) and (max-width: 1199px) {
     .colfour {
         padding-left: 0px;
      }
 }
+
 @media only screen and (min-width:992px) and (max-width:1024px){
     .colfour {
         padding-left: 0px;
      }
 }
+
 @media only screen and (min-width:768px) and (max-width:992px){
     .colfour {
         padding-left: 0px;
      }
      .profilePhoto {
-        width:100%;
+        width: 240px;
     }
 }
+
 @media only screen and (min-width:200px) and (max-width:767px){
     .colfour {
         padding-left: 0px;
      }
+     .myphoto {
+         position: relative;
+         top: auto;
+         left: auto;
+         display: flex;
+         justify-content: center;
+     }
      .profilePhoto {
-        position:static;
-    }
+         position: relative;
+         transform: translateY(0);
+         width: 220px;
+     }
     .titleTwo {
         line-height: 25px;
         letter-spacing: 0.5px;
@@ -158,15 +255,3 @@ dl, ol, ul {
         text-align: justify;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
