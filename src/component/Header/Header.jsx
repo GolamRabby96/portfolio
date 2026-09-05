@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
 import NavBar from "../NavBar/NavBar";
-import myphoto from "../image/me1.jpg";
+import myphoto from "../image/gr.jpg";
 import Typewriter from "typewriter-effect";
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
